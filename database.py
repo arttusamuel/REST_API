@@ -1,6 +1,6 @@
 
 from sqlalchemy import create_engine, Table, select, MetaData
-from dotenv import load_dotenv
+from dotenv import load_dotenv # to read .env file
 import os
 # from sqlalchemy.orm import sessionmaker -> when taking ORM into use, use sessions
 import time
@@ -11,7 +11,7 @@ import logging
 load_dotenv()
 metadata = MetaData()
 
-# Log in credentials and connection URL-string as DATABASE_CONNECTION
+# Log in credentials and connection URL-string as DATABASE_CONNECTION, from .env -file
 SERVER_IP = os.getenv("SERVER_IP")
 DRIVER = os.getenv("DRIVER")
 DATABASE = os.getenv("DATABASE")
